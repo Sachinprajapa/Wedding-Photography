@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+
+  <nav class="navbar">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+      Kirti Studio
+    </div>
+
+    <!-- MENU -->
+
+    <ul class="nav-links" id="navLinks">
+
+      <li><a href="./index.html">Home</a></li>
+
+      <li><a href="./About.html">About</a></li>
+
+      <li><a href="./Servcis.html">Services</a></li>
+
+      <li><a href="./Packegs.html">Packages</a></li>
+
+      <li><a href="./Gallary.html">Gallery</a></li>
+
+      <li><a href="./Contact.php">Contact</a></li>
+
+    </ul>
+
+    <!-- HAMBURGER -->
+
+    <div class="menu-btn" id="menuBtn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+  </nav>
+
+</header>
+    <!-- ================= WEDDING PACKAGES SECTION ================= -->
+
+<section class="packages-section">
+
+  <div class="section-title">
+    <h1>Choose Your Perfect Package</h1>
+
+    <p>
+      Affordable photography and cinematic wedding packages crafted
+      to capture your unforgettable memories beautifully.
+    </p>
+  </div>
+
+  <div class="packages-container">
+
+    <!-- ================= BASIC PACKAGE ================= -->
+
+    <div class="package-card">
+
+      <h2>💍 Basic Package</h2>
+
+      <p class="package-text">
+        Perfect for small celebrations and intimate events.
+      </p>
+
+      <ul>
+        <li>✅ 1 Photographer</li>
+        <li>✅ Traditional Photography</li>
+        <li>✅ 6 Hours Coverage</li>
+        <li>✅ 100+ Edited Photos</li>
+        <li>✅ Online Photo Delivery</li>
+        <li>✅ Basic Color Correction</li>
+      </ul>
+
+      <div class="price">₹15,999</div>
+
+      <a href="#" class="package-btn">Book Now</a>
+
+    </div>
+
+    <!-- ================= PREMIUM PACKAGE ================= -->
+
+    <div class="package-card premium">
+
+      <div class="popular-tag">⭐ Most Popular</div>
+
+      <h2>👑 Premium Package</h2>
+
+      <p class="package-text">
+        Best choice for weddings with cinematic memories.
+      </p>
+
+      <ul>
+        <li>✅ 2 Professional Photographers</li>
+        <li>✅ Cinematic Videography</li>
+        <li>✅ Drone Coverage</li>
+        <li>✅ Full Day Coverage</li>
+        <li>✅ 300+ Edited Photos</li>
+        <li>✅ Premium Album Design</li>
+        <li>✅ Instagram Wedding Reel</li>
+      </ul>
+
+      <div class="price">₹39,999</div>
+
+      <a href="#" class="package-btn">Most Popular</a>
+
+    </div>
+
+    <!-- ================= LUXURY PACKAGE ================= -->
+
+    <div class="package-card">
+
+      <h2>✨ Luxury Package</h2>
+
+      <p class="package-text">
+        A complete luxury wedding storytelling experience.
+      </p>
+
+      <ul>
+        <li>✅ Full Professional Team</li>
+        <li>✅ 4K Cinematic Wedding Film</li>
+        <li>✅ Drone + Creative Reel Shoot</li>
+        <li>✅ Multi-Day Coverage</li>
+        <li>✅ Luxury Album Printing</li>
+        <li>✅ LED Lighting Setup</li>
+        <li>✅ Couple Highlight Film</li>
+        <li>✅ Fast Delivery Support</li>
+      </ul>
+
+      <div class="price">₹79,999</div>
+
+      <a href="#" class="package-btn">Contact Us</a>
+
+    </div>
+
+  </div>
+
+  <!-- ================= EXTRA INFO ================= -->
+
+  <div class="extra-info">
+
+    <h2>🌍 Extra Information</h2>
+
+    <div class="info-box">
+      <p>✔ Destination Wedding Available</p>
+      <p>✔ Custom Packages Available</p>
+      <p>✔ Travel Charges May Apply</p>
+      <p>✔ Free Consultation Available</p>
+    </div>
+
+  </div>
+
+  <!-- ================= TAGLINES ================= -->
+
+  <div class="taglines">
+
+    <h2>🎨 Stylish Taglines</h2>
+
+    <div class="tagline-container">
+
+      <span>Memories That Last Forever</span>
+      <span>Crafting Cinematic Love Stories</span>
+      <span>Every Moment Deserves Perfection</span>
+      <span>Turning Emotions Into Timeless Frames</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CSS ================= -->
+
+<style>
+
+  body{
+    background:#181818;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+  }
+
+  .packages-section{
+    width:100%;
+    padding:80px 20px;
+  }
+
+  /* ================= TITLE ================= */
+
+  .section-title{
+    text-align:center;
+    margin-bottom:60px;
+  }
+
+  .section-title h1{
+    font-size:48px;
+    color:#ffd700;
+    margin-bottom:15px;
+  }
+
+  .section-title p{
+    max-width:800px;
+    margin:auto;
+    color:#ddd;
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  /* ================= PACKAGE GRID ================= */
+
+  .packages-container{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+  }
+
+  /* ================= PACKAGE CARD ================= */
+
+  .package-card{
+
+    position:relative;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:25px;
+
+    padding:35px 25px;
+
+    transition:0.5s ease;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .package-card:hover{
+    transform:translateY(-15px) scale(1.03);
+    box-shadow:0 20px 40px rgba(255,215,0,0.2);
+  }
+
+  .package-card::before{
+    content:"";
+    position:absolute;
+    width:250%;
+    height:250%;
+    top:-100%;
+    left:-100%;
+    background:linear-gradient(
+      45deg,
+      transparent,
+      rgba(255,255,255,0.05),
+      transparent
+    );
+
+    transform:rotate(25deg);
+    transition:0.8s;
+  }
+
+  .package-card:hover::before{
+    left:100%;
+  }
+
+  .package-card h2{
+    color:#ffd700;
+    font-size:30px;
+    margin-bottom:15px;
+  }
+
+  .package-text{
+    color:#ddd;
+    margin-bottom:25px;
+    line-height:1.7;
+  }
+
+  .package-card ul{
+    list-style:none;
+    margin-bottom:30px;
+  }
+
+  .package-card ul li{
+    margin-bottom:14px;
+    color:#f1f1f1;
+    font-size:16px;
+  }
+
+  .price{
+    font-size:42px;
+    color:#ffd700;
+    font-weight:bold;
+    margin-bottom:25px;
+  }
+
+  /* ================= BUTTON ================= */
+
+  .package-btn{
+    display:inline-block;
+    text-decoration:none;
+
+    padding:14px 35px;
+
+    border-radius:40px;
+
+    background:#ffd700;
+    color:black;
+
+    font-weight:bold;
+
+    transition:0.4s;
+  }
+
+  .package-btn:hover{
+    background:white;
+    transform:scale(1.08);
+  }
+
+  /* ================= PREMIUM ================= */
+
+  .premium{
+    border:2px solid #ffd700;
+    transform:scale(1.03);
+  }
+
+  .premium:hover{
+    transform:translateY(-15px) scale(1.06);
+  }
+
+  .popular-tag{
+    position:absolute;
+    top:20px;
+    right:-40px;
+
+    background:#ffd700;
+    color:black;
+
+    padding:10px 45px;
+
+    transform:rotate(45deg);
+
+    font-size:14px;
+    font-weight:bold;
+  }
+
+  /* ================= EXTRA INFO ================= */
+
+  .extra-info{
+    max-width:1000px;
+    margin:80px auto 40px;
+    text-align:center;
+  }
+
+  .extra-info h2{
+    color:#ffd700;
+    margin-bottom:25px;
+    font-size:36px;
+  }
+
+  .info-box{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+    padding:30px;
+
+    border:1px solid rgba(255,255,255,0.1);
+  }
+
+  .info-box p{
+    margin-bottom:15px;
+    font-size:18px;
+    color:#eee;
+  }
+
+  /* ================= TAGLINES ================= */
+
+  .taglines{
+    text-align:center;
+    margin-top:70px;
+  }
+
+  .taglines h2{
+    color:#ffd700;
+    margin-bottom:30px;
+    font-size:36px;
+  }
+
+  .tagline-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+  }
+
+  .tagline-container span{
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    padding:15px 25px;
+
+    border-radius:40px;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+
+    color:#fff;
+  }
+
+  .tagline-container span:hover{
+    transform:translateY(-8px);
+    background:#ffd700;
+    color:black;
+  }
+
+  /* ================= RESPONSIVE ================= */
+
+  @media(max-width:768px){
+
+    .section-title h1{
+      font-size:34px;
+    }
+
+    .section-title p{
+      font-size:16px;
+    }
+
+    .package-card h2{
+      font-size:26px;
+    }
+
+    .price{
+      font-size:35px;
+    }
+
+    .extra-info h2,
+    .taglines h2{
+      font-size:30px;
+    }
+
+  }
+
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+
+  body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#181818;
+  }
+
+  /* ================= HEADER ================= */
+
+  header{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+  }
+
+  /* ================= NAVBAR ================= */
+
+  .navbar{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:18px 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+  }
+
+  /* ================= LOGO ================= */
+
+  .logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#ffd700;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    transition:0.4s;
+  }
+
+  .logo:hover{
+    transform:scale(1.05);
+  }
+
+  /* ================= LINKS ================= */
+
+  .nav-links{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+  }
+
+  .nav-links li a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:0.4s;
+  }
+
+  /* HOVER LINE */
+
+  .nav-links li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:2px;
+
+    left:0;
+
+    bottom:-6px;
+
+    background:#ffd700;
+
+    transition:0.4s;
+  }
+
+  .nav-links li a:hover::after{
+    width:100%;
+  }
+
+  .nav-links li a:hover{
+    color:#ffd700;
+  }
+
+  /* ================= MENU BUTTON ================= */
+
+  .menu-btn{
+
+    display:none;
+
+    font-size:30px;
+
+    color:white;
+
+    cursor:pointer;
+  }
+
+  /* ================= RESPONSIVE ================= */
+
+  @media(max-width:900px){
+
+    .menu-btn{
+      display:block;
+    }
+
+    .nav-links{
+
+      position:fixed;
+
+      top:80px;
+
+      right:-100%;
+
+      width:260px;
+
+      height:100vh;
+
+      background:rgba(0,0,0,0.95);
+
+      backdrop-filter:blur(20px);
+
+      flex-direction:column;
+
+      align-items:center;
+
+      padding-top:50px;
+
+      transition:0.5s;
+    }
+
+    .nav-links.active{
+      right:0;
+    }
+
+    .nav-links li{
+      margin:20px 0;
+    }
+
+  }
+
+</style>
+
+<!-- ================= FONT AWESOME ================= -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+
+  menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+  });
+
+</script>
+
+</style>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kirti Studio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg,#111,#1f1f1f,#2d2d2d);
+      min-height:100vh;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header{
+      width:100%;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.4);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+    }
+
+    nav{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 20px;
+    }
+
+    .logo{
+      color:#ffd700;
+      font-size:26px;
+      font-weight:bold;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:25px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+      font-size:16px;
+      position:relative;
+    }
+
+    .nav-links a:hover{
+      color:#ffd700;
+    }
+
+    .menu-btn{
+      display:none;
+      font-size:28px;
+      cursor:pointer;
+      color:white;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      width:100%;
+      padding:80px 20px 40px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:48px;
+      color:#ffd700;
+      margin-bottom:15px;
+    }
+
+    .hero p{
+      font-size:20px;
+      color:#ddd;
+    }
+
+    /* ================= GLASS BOX ================= */
+
+    .glass-box{
+      max-width:1200px;
+      margin:40px auto;
+      padding:30px;
+      border-radius:25px;
+
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+
+      border:1px solid rgba(255,255,255,0.2);
+
+      display:flex;
+      gap:30px;
+      align-items:center;
+
+      transition:0.5s;
+      box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .glass-box:hover{
+      transform:translateY(-10px) scale(1.02);
+    }
+
+    .glass-box img{
+      width:350px;
+      border-radius:20px;
+      object-fit:cover;
+    }
+
+    .glass-content h2{
+      color:#ffd700;
+      margin-bottom:15px;
+      font-size:35px;
+    }
+
+    .glass-content p{
+      line-height:1.8;
+      color:#eee;
+      font-size:17px;
+    }
+
+    /* ================= CARDS ================= */
+
+    .card-container{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+      padding:20px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+
+      border-radius:20px;
+      overflow:hidden;
+
+      transition:0.5s;
+      box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .card:hover{
+      transform:translateY(-15px) rotate(1deg);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+      text-align:center;
+    }
+
+    .card-content h3{
+      color:#ffd700;
+      margin-bottom:10px;
+      font-size:24px;
+    }
+
+    .card-content p{
+      color:#ddd;
+      line-height:1.6;
+    }
+
+    /* ================= PROFESSIONAL ================= */
+
+    .professional{
+      max-width:1000px;
+      margin:60px auto;
+      padding:40px 25px;
+      text-align:center;
+
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+
+      border-radius:25px;
+      border:1px solid rgba(255,255,255,0.15);
+
+      transition:0.5s;
+    }
+
+    .professional:hover{
+      transform:translateY(-10px);
+    }
+
+    .professional h2{
+      color:#ffd700;
+      margin-bottom:20px;
+      font-size:38px;
+    }
+
+    .professional p{
+      font-size:18px;
+      line-height:1.8;
+      color:#eee;
+    }
+
+    .location{
+      margin-top:20px;
+      font-size:18px;
+      color:#fff;
+    }
+
+    .location i{
+      color:red;
+      margin-right:8px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      margin-top:60px;
+      text-align:center;
+      padding:30px 20px;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter:blur(10px);
+    }
+
+    footer p{
+      color:#ccc;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:900px){
+
+      .glass-box{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .glass-box img{
+        width:100%;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+    }
+
+    @media(max-width:768px){
+
+      .menu-btn{
+        display:block;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:70px;
+        right:-100%;
+        width:250px;
+        height:100vh;
+        background:rgba(0,0,0,0.9);
+        flex-direction:column;
+        padding-top:50px;
+        align-items:center;
+        transition:0.5s;
+      }
+
+      .nav-links.active{
+        right:0;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .glass-content h2{
+        font-size:28px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+    <nav>
+      <div class="logo">Kirti Studio</div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./About.html">About</a></li>
+        <li><a href="./Servcis.html">Services</a></li>
+        <li><a href="./Gallary.html">Gallery</a></li>
+        <li><a href="./Contact.php">Contact</a></li>
+      </ul>
+
+      <div class="menu-btn" id="menuBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+    <h1>About Kirti Studio</h1>
+    <p>Capturing emotions, creating memories for life</p>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+
+  <section class="glass-box">
+
+    <img src="./img/wen3.jpg"
+      alt="Wedding">
+
+    <div class="glass-content">
+      <h2>Professional Photography</h2>
+
+      <p>
+        Kirti Studio ek professional photography & videography studio hai
+        jo aapke special moments ko cinematic aur beautiful memories me badalta hai.
+      </p>
+
+      <br>
+
+      <p>
+        Hum wedding shoot, pre-wedding, birthday, fashion aur event photography
+        me expert hain.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+
+  <section class="card-container">
+
+    <div class="card">
+      <img src="./img/san4.webp">
+
+      <div class="card-content">
+        <h3>Wedding Shoot</h3>
+        <p>Beautiful wedding photography with cinematic style and emotional moments.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./img/eng1.jpg">
+
+      <div class="card-content">
+        <h3>Our Vision</h3>
+        <p>Creating unforgettable memories through creativity and storytelling.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./img/eng2.jpg">
+
+      <div class="card-content">
+        <h3>Our Mission</h3>
+        <p>Delivering premium photography experience with modern equipment.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ================= PROFESSIONAL ================= -->
+
+  <section class="professional">
+
+    <h2>Professional Style</h2>
+
+    <p>
+      We are a Kanpur-based wedding photography studio capturing timeless
+      memories with creativity and emotion.
+    </p>
+
+    <div class="location">
+      <i class="fa-solid fa-location-dot"></i>
+      Swaroop Nagar, Kanpur, Uttar Pradesh, India
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+    <p>© 2026 Kirti Studio | All Rights Reserved</p>
+  </footer>
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+  </script>
+
+</body>
+</html>
